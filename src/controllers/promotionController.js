@@ -121,7 +121,7 @@ const EN = {
 		},
 	],
 	closing:
-		"Bagi yang mencapai keuntungan lebih dari 100% dalam 3 bulan, pemenang akan mendapatkan $10,000 sebagai Master Trader dan akan memperoleh 20% dari keuntungan yang dihasilkan",
+		"Those who make more than 100% in 3 months For the winner, will get 10,000$ as Master Trader they will got and will get 20% from the profit you make",
 };
 
 const MS = {
