@@ -1,0 +1,199 @@
+/* Icon */
+.translate-icon {
+	-webkit-mask: url("/images/native-icons/translate-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/translate-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+/* Social Media */
+.ig-icon {
+	-webkit-mask: url("/images/native-icons/ig-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/ig-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.x-icon {
+	-webkit-mask: url("/images/native-icons/x-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/x-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.linkedin-icon {
+	-webkit-mask: url("/images/native-icons/linkedin-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/linkedin-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.fb-icon {
+	-webkit-mask: url("/images/native-icons/fb-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/fb-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.yt-icon {
+	-webkit-mask: url("/images/native-icons/yt-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/yt-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+.email-icon {
+	-webkit-mask: url("/images/native-icons/email-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/email-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+.pin-location-icon {
+	-webkit-mask: url("/images/native-icons/pin-location-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/pin-location-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+.phone-icon {
+	-webkit-mask: url("/images/native-icons/phone-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/phone-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.home-6 {
+	-webkit-mask: url("/images/native-icons/home-6.svg") no-repeat center;
+	mask: url("/images/native-icons/home-6.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.chev-left-icon {
+	-webkit-mask: url("/images/native-icons/chev-left-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/chev-left-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.chev-right-icon {
+	-webkit-mask: url("/images/native-icons/chev-right-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/chev-right-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.list-icon {
+	-webkit-mask: url("/images/native-icons/list-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/list-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.x-close-icon {
+	-webkit-mask: url("/images/native-icons/x-close-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/x-close-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.chat-icon {
+	-webkit-mask: url("/images/native-icons/chat-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/chat-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.checkbox-icon {
+	-webkit-mask: url("/images/native-icons/checkbox-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/checkbox-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.telegram-icon {
+	-webkit-mask: url("/images/native-icons/telegram-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/telegram-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.whatsapp-icon {
+	-webkit-mask: url("/images/native-icons/whatsapp-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/whatsapp-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.skype-icon {
+	-webkit-mask: url("/images/native-icons/skype-icon.svg") no-repeat center;
+	mask: url("/images/native-icons/skype-icon.svg") no-repeat center;
+	display: inline-block;
+	-webkit-mask-size: contain; /* or cover */
+	mask-size: contain; /* or cover */
+	border-radius: 50%;
+}
+
+.icon-sm {
+	width: 1rem;
+	height: 1rem;
+}
+
+.icon-base {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.icon-md {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.icon-lg {
+	width: 1.8rem;
+	height: 1.8rem;
+}
+
+.icon-xl {
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.icon-2xl {
+	width: 2.8rem;
+	height: 2.8rem;
+}

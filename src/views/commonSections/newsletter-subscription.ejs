@@ -1,0 +1,52 @@
+<section class="reveal fade-right">
+	<form id="newsletterSubscriptionForm" method="post" action="/newsletters/subscribe">
+		<div class="flex flex-col items-center bg-info_darker py-20 text-info horizontal-padding">
+			<h5 class="font-semibold text-primary underline mb-2">Bergabunglah dengan buletin kami</h5>
+			<h6 class="mb-6">Langganan buletin mingguan kami.</h6>
+			<div class="flex flex-col sm:flex-row w-full max-w-[50rem] justify-center gap-2 mb-4">
+				<input
+					name="email"
+					type="email"
+					class="input-sm w-full text-primary"
+					placeholder="Alamat email" />
+				<button class="btn btn-primary h-12" type="submit">
+					<p>Berlangganan</p>
+				</button>
+			</div>
+			<p class="text-center">Masukkan email anda untuk berlangganan. Contoh: example@email.com</p>
+			<p id="error-text" class="error-text hidden">
+				Invalid Email Address! Provide your email address to subscribe. For example@email.com
+			</p>
+		</div>
+	</form>
+</section>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const newsletterSubscriptionForm = document.getElementById("newsletterSubscriptionForm");
+		const errorText = document.getElementById("error-text");
+
+		function validateInput(email) {
+			return email != undefined && email.value !== "undefined" && email.value !== "";
+		}
+
+		function handleFormSubmit(event) {
+			event.preventDefault();
+
+			const email = newsletterSubscriptionForm.querySelector("input");
+
+			const isValid = validateInput(email);
+			if (isValid) {
+				if (!errorText.classList.contains("hidden")) {
+					errorText.classList.add("hidden");
+				}
+				newsletterSubscriptionForm.submit();
+			} else {
+				if (errorText.classList.contains("hidden")) {
+					errorText.classList.remove("hidden");
+				}
+			}
+		}
+
+		newsletterSubscriptionForm.addEventListener("submit", handleFormSubmit);
+	});
+</script>

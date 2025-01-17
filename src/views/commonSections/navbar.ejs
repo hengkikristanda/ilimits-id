@@ -1,0 +1,189 @@
+<nav class="navbar">
+	<div class="mx-auto flex justify-between items-center">
+		<a href="/">
+			<img src="/images/ilimits-logo.svg" />
+		</a>
+		<div class="flex gap-4 items-center">
+			<div>
+				<ul class="navbar-menu">
+					<li>
+						<a class="text-link" href="/">Home</a>
+					</li>
+					<li>
+						<a class="text-link" href="/promotion">Promotion</a>
+					</li>
+					<li>
+						<a class="text-link" href="/trading">Trading</a>
+					</li>
+					<li>
+						<a class="text-link" href="/platform">Platform</a>
+					</li>
+					<li>
+						<a class="text-link" href="/about-us">About</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div id="language-icon-btn" class="language-icon-btn icon-btn group relative">
+					<i class="translate-icon icon-lg bg-primary group-hover:bg-white"></i>
+					<div
+						id="language-menu"
+						class="language-menu absolute right-0 top-full transition-all duration-100 ease-in-out opacity-0 h-0 overflow-hidden rounded-lg shadow-md border border-gray-50 bg-white">
+						<div class="flex flex-col p-2 font-semibold text-gray-800">
+							<a href="?lang=en" class="icon-flag-container">
+								<div><img src="/images/flag/flag-en.png" alt="" class="size-full" /></div>
+								<h6>English</h6>
+							</a>
+							<a href="?lang=id" class="icon-flag-container">
+								<div><img src="/images/flag/flag-id.png" alt="" class="size-full" /></div>
+								<h6>Bahasa Indonesia</h6>
+							</a>
+							<a href="?lang=ms" class="icon-flag-container">
+								<div><img src="/images/flag/flag-ms.png" alt="" class="size-full" /></div>
+								<h6>Malay</h6>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-text-btn">
+				<a class="btn-outline" href="">Register</a>
+				<a class="btn-primary" href="">Login</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<nav class="navbar-mobile">
+	<div class="mx-auto flex justify-between items-center">
+		<a href="/" class="w-20">
+			<img src="/images/ilimits-logo.svg" />
+		</a>
+		<div class="flex gap-4 items-center">
+			<div>
+				<div id="language-icon-btn" class="language-icon-btn icon-btn group relative">
+					<i class="translate-icon icon-lg bg-primary group-hover:bg-white"></i>
+					<div
+						id="language-menu"
+						class="language-menu absolute right-0 top-full transition-all duration-100 ease-in-out opacity-0 h-0 overflow-hidden rounded-lg shadow-md border border-gray-50 bg-white">
+						<div class="flex flex-col p-2 font-semibold text-gray-800">
+							<a href="?lang=en" class="icon-flag-container">
+								<div><img src="/images/flag/flag-en.png" alt="" class="size-full" /></div>
+								<h6>English</h6>
+							</a>
+							<a href="?lang=id" class="icon-flag-container">
+								<div><img src="/images/flag/flag-id.png" alt="" class="size-full" /></div>
+								<h6>Bahasa Indonesia</h6>
+							</a>
+							<a href="?lang=ms" class="icon-flag-container">
+								<div><img src="/images/flag/flag-ms.png" alt="" class="size-full" /></div>
+								<h6>Malay</h6>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center items-center gap-4">
+				<a class="my-button primary rounded" href="">
+					<span>Login</span>
+				</a>
+				<div class="toggle-drawer my-button group noline-primary rounded">
+					<i class="list-icon icon-md bg-primary group-hover:bg-white"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div
+	id="drawer"
+	class="fixed size-full bg-white z-50 flex flex-col p-4 gap-4 transform translate-x-full w-full transition-all duration-300 ease-in-out">
+	<div class="flex justify-between items-center">
+		<div class="w-36">
+			<img src="/images/ilimits-logo.svg" class="size-full" />
+		</div>
+		<div class="toggle-drawer my-button group noline-primary rounded">
+			<i class="x-close-icon icon-md bg-primary group-hover:bg-white"></i>
+		</div>
+	</div>
+	<div class="flex justify-between items-center gap-2 text-info">
+		<a class="my-button outline-primary block rounded" href="#"><span>Register</span></a>
+		<a class="my-button primary block rounded" href="#"><span>Login</span></a>
+	</div>
+	<div class="navbar-menu-mobile">
+		<a class="selected" href="/"><span>Home</span></a>
+		<a href="/promotion"><span>Promotion</span></a>
+		<a href="/trading"><span>Trading</span></a>
+		<a href="/platform"><span>Platform</span></a>
+		<a href="/about-us"><span>About</span></a>
+	</div>
+</div>
+
+<script>
+	const languageIconButton = document.querySelectorAll(".language-icon-btn");
+	const toggleDrawer = document.querySelectorAll(".toggle-drawer");
+	const drawer = document.getElementById("drawer");
+
+	function toggleMenu(event) {
+		event.stopPropagation();
+		const menus = document.querySelectorAll(".language-menu");
+
+		menus.forEach((menu) => {
+			if (menu.classList.contains("h-0")) {
+				menu.classList.remove("opacity-0", "h-0");
+				menu.classList.add("opacity-100", "h-fit");
+			} else {
+				menu.classList.remove("opacity-100", "h-fit");
+				menu.classList.add("opacity-0", "h-0");
+			}
+		});
+	}
+
+	function handleClickOutside(event) {
+		const menus = document.querySelectorAll(".language-menu");
+
+		const notClicked = Array.from(languageIconButton).every((item) => !item.contains(event.target));
+
+		menus.forEach((menu) => {
+			if (!menu.contains(event.target) && notClicked) {
+				menu.classList.remove("opacity-100", "h-fit");
+				menu.classList.add("opacity-0", "h-0");
+			}
+		});
+	}
+
+	function handleToggleDrawer() {
+		if (drawer.classList.contains("translate-x-full")) {
+			drawer.classList.remove("translate-x-full");
+		} else {
+			drawer.classList.add("translate-x-full");
+		}
+	}
+
+	languageIconButton.forEach((btn) => {
+		btn.addEventListener("click", toggleMenu);
+	});
+
+	document.addEventListener("click", handleClickOutside);
+	// closeDrawerButton.addEventListener("click", toggleDrawer);
+
+	toggleDrawer.forEach((buttonDrawer) => {
+		buttonDrawer.addEventListener("click", handleToggleDrawer);
+	});
+
+	let lastWidth = window.innerWidth;
+
+	window.addEventListener("resize", () => {
+		const currentWidth = window.innerWidth;
+
+		if (lastWidth <= 1024 && currentWidth > 1024) {
+			if (!drawer.classList.contains("translate-x-full")) {
+				drawer.classList.add("translate-x-full");
+			}
+		} else if (lastWidth > 1024 && currentWidth <= 1024) {
+			console.log("The browser resized smaller than or equal to 1024px.");
+		}
+
+		lastWidth = currentWidth; // Update the lastWidth
+	});
+</script>

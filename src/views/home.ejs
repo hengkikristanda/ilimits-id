@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./commonSections/head') %>
+
+	<body>
+		<%- include('./commonSections/navbar') %>
+
+		<div class="max-w-screen-2xl mx-auto py-24">
+			<%- include('./commonSections/home-hero') %> <%- include('./commonSections/feature-highlight')
+			%> <%- include('./commonSections/feature-benefit') %> <%-
+			include('./commonSections/feature-download-app') %> <%-
+			include('./commonSections/feature-account') %>
+
+			<div class="flex flex-col hidden">
+				<h1>TEST</h1>
+				<div class="flex justify-center items-center">
+					<div class="account-card-container flex flex-col items-center justify-center border border-red-800 p-8 relative bg-primary">
+						<div class="bg-white w-72 h-56 rounded-[2rem] absolute bottom-20">
+							<div class="flex flex-col items-center pt-12">
+								<p>Minimum Deposit $20</p>
+								<p>1</p>
+								<p>1</p>
+							</div>
+						</div>
+						<h3 class="bg-green-800 w-48 py-4 rounded-full text-white z-20 text-center flex justify-center items-center font-bold relative -top-8">
+							ECN
+						</h3>
+						<div class="bg-green-800 w-80 h-52 rounded-[2rem]">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%- include('./commonSections/get-in-touch') %> <%-
+			include('./commonSections/newsletter-subscription') %> <%- include('./commonSections/footer')
+			%>
+		</div>
+	</body>
+
+	<script src="/js/commonUtils.js"></script>
+</html>

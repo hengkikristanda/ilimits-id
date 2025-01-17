@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../commonSections/head') %>
+
+	<body>
+		<%- include('../commonSections/navbar') %>
+
+		<div class="max-w-screen-2xl mx-auto py-24">
+			<div class="flex flex-col text-info horizontal-padding gap-8">
+				<div class="flex flex-col w-fit mt-8">
+					<h1 class="font-semibold text-primary">Promotions</h1>
+					<hr class="w-1/2 h-2 bg-primary" />
+				</div>
+				
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+					<a href="/promotion/master-trader-challenge" class="flex flex-col shadow-md border border-line hover:border-2 hover:border-primary/50 hover:shadow-primary/50 gap-4 rounded-md">
+						<div class="min-w-40 max-w-[32-rem] border border-line">
+							<img src="/images/promotions/master Trader_page-0003.jpg" alt="" class="size-full object-cover">
+						</div>
+						<div class="flex flex-col text-info px-6 gap-4 pb-8">
+							<h4 class="font-semibold">Master Trader Challenge</h4>
+							<p>Valid until Dec, 2025</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<%- include('../commonSections/newsletter-subscription') %> <%-
+			include('../commonSections/footer') %>
+		</div>
+	</body>
+
+	<script src="/js/commonUtils.js"></script>
+</html>

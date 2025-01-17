@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../commonSections/head') %>
+
+	<body>
+		<%- include('../commonSections/navbar') %>
+
+		<div class="max-w-screen-2xl mx-auto py-24">
+			<div class="flex flex-col text-info horizontal-padding gap-8">
+				<div class="flex flex-col w-fit">
+					<h1 class="font-semibold text-primary">Trading Account</h1>
+					<hr class="w-1/2 h-2 bg-primary" />
+				</div>
+				<div class="mb-6">
+					<p>
+						At iLimits, we are dedicated to providing our clients with the ultimate trading
+						experience. To achieve this, we offer a diverse range of account options to suit the
+						unique needs of each trader. Whether you're a beginner looking to open a Demo account or
+						an experienced trader looking for a Live account, we have options for you. Our Micro,
+						Premium, and Islamic Accounts provide complete flexibility to trade at your desired
+						level, while our various account types, with highly competitive and tailor-made trading
+						conditions, cater to the demands of all types of traders, from those looking for micro
+						to unlimited trade sizes. Whatever your trading strategy or funding level, iLimits has
+						an account to match your needs.
+					</p>
+				</div>
+
+				<div class="flex flex-col text-info mb-20">
+					<h3 class="font-semibold mb-6">Quick View - Account Types</h3>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+						<div class="flex flex-col text-center">
+							<h4 class="bg-black text-white py-6 font-semibold rounded-t-lg">STP</h4>
+							<p class="py-3 border-b border-x border-line">Minimum Deposit <strong>$10</strong></p>
+							<p class="py-3 border-b border-x border-line">
+								Maximum Leverage <strong>1:1000*</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Spreads Types <strong>Variable</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Spreads From (pips) <strong>From 1 pip</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Max Simultaneous Open Orders <strong>150</strong>
+							</p>
+							<div class="py-6 border-b border-x border-line rounded-b-lg">
+								<a href="/trading/stp" class="my-button primary rounded mx-auto min-w-72">
+									<span>Read More</span>
+								</a>
+							</div>
+						</div>
+						<div class="flex flex-col text-center">
+							<h4 class="bg-black text-white py-6 font-semibold rounded-t-lg">ECN</h4>
+							<p class="py-3 border-b border-x border-line">Minimum Deposit <strong>$10</strong></p>
+							<p class="py-3 border-b border-x border-line">
+								Maximum Leverage <strong>1:1000*</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Spreads Types <strong>Variable</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Spreads From (pips) <strong>From 1 pip</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Max Simultaneous Open Orders <strong>150</strong>
+							</p>
+							<div class="py-6 border-b border-x border-line rounded-b-lg">
+								<a href="/trading/ecn" class="my-button primary rounded mx-auto min-w-72">
+									<span>Read More</span>
+								</a>
+							</div>
+						</div>
+						<div class="flex flex-col text-center">
+							<h4 class="bg-black text-white py-6 font-semibold rounded-t-lg">Islamic</h4>
+							<p class="py-3 border-b border-x border-line">Minimum Deposit <strong>$10</strong></p>
+							<p class="py-3 border-b border-x border-line">
+								Maximum Leverage <strong>1:1000*</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Spreads Types <strong>Variable</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Spreads From (pips) <strong>From 1 pip</strong>
+							</p>
+							<p class="py-3 border-b border-x border-line">
+								Max Simultaneous Open Orders <strong>150</strong>
+							</p>
+							<div class="py-6 border-b border-x border-line rounded-b-lg">
+								<a href="/trading/islamic" class="my-button primary rounded mx-auto min-w-72">
+									<span>Read More</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%- include('../commonSections/newsletter-subscription') %> <%-
+			include('../commonSections/footer') %>
+		</div>
+	</body>
+
+	<script src="/js/commonUtils.js"></script>
+</html>

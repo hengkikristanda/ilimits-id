@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../commonSections/head') %>
+
+	<body>
+		<%- include('../commonSections/navbar') %>
+
+		<div class="max-w-screen-2xl mx-auto py-24">
+			<div class="flex flex-col gap-8 bg-black text-white pb-20 mb-12">
+				<div class="flex justify-between items-center border-b-2 border-info p-4 font-semibold hidden md:flex">
+					<a class="flex items-center text-xs gap-2" href="/trading">
+						<i class="chev-left-icon icon-sm bg-white"></i>
+						Back
+					</a>
+					<div class="flex items-center gap-6">
+						<a href="/" class="home-6 icon-sm bg-white"></a>
+						<i class="chev-right-icon icon-sm bg-white"></i>
+						<a class="text-xs" href="/trading">Trading Account</a>
+						<i class="chev-right-icon icon-sm bg-white"></i>
+						<p class="text-xs border border-white py-2 px-4 rounded">Islamic Account</p>
+					</div>
+				</div>
+				<div class="flex flex-col item-center justify-center text-center py-20 px-8 md:p-20 gap-8">
+					<h1 class="subheading font-semibold">STP Account</h1>
+					<h6>
+						The Straight Through Processing or STP Account, is a type of technology used by brokers
+						to electronically transmit trades directly to the market. Clients are sent directly to
+						liquidity providers such as banks or interbank exchange houses via STP forex brokers
+						executing trades on their behalf. Transactions don't go through a "Dealing Desk" - they
+						go directly to the market.<br /><br />Using an STP account, all trades will be routed
+						first to the liquidity pool, and then all orders will be filled at the best possible
+						price.
+					</h6>
+					<a
+						href="https://my.ilimitsinv.com/en/register"
+						target="_blank"
+						class="my-button primary rounded mx-auto min-w-72">
+						<span>Open Islamic Account</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="flex flex-col items-center gap-6 text-info mb-32 reveal fade-up horizontal-padding">
+				<h1 class="font-semibold text-center md:text-start">Advantages of Islamic Accounts</h1>
+				<h6>Usually, no minimum amount of investment</h6>
+				<div class="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/5 gap-12">
+					<div class="flex">
+						<i class="checkbox-icon icon-lg bg-primary min-w-12"></i>
+						<div class="flex flex-col gap-4">
+							<h5 class="font-semibold">Increased gains</h5>
+							<p>
+								The STP overall improves the gain ratio by transferring the funds at the time of
+								major market movements allowing the transfer of the investment to the better and
+								fast-growing potential companies instead of just watching investment fall into
+								losses.
+							</p>
+						</div>
+					</div>
+					<div class="flex">
+						<i class="checkbox-icon icon-lg bg-primary min-w-12"></i>
+						<div class="flex flex-col gap-4">
+							<h5 class="font-semibold">Power of compounding</h5>
+							<p>Earn interest even when transferring money from one fund to another.</p>
+						</div>
+					</div>
+					<div class="flex">
+						<i class="checkbox-icon icon-lg bg-primary min-w-12"></i>
+						<div class="flex flex-col gap-4">
+							<h5 class="font-semibold">Stability in investment</h5>
+							<p>
+								Portfolio can be stabilized by maintaining the parity between debt funds and equity
+								funds as and when required.
+							</p>
+						</div>
+					</div>
+					<div class="flex">
+						<i class="checkbox-icon icon-lg bg-primary min-w-12"></i>
+						<div class="flex flex-col gap-4">
+							<h5 class="font-semibold">Flexibility</h5>
+							<p>
+								Tactical assets allocations and rebalancing; easily moving funds from debt to equity
+								and vice versa.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col justify-center gap-12 pt-12 mb-32 border-t-2 border-line reveal fade-up">
+				<div class="flex flex-col md:flex-row justify-center items-center gap-8">
+					<div class="flex items-center font-semibold text-info gap-4">
+						<i class="checkbox-icon icon-lg bg-primary"></i>
+						<p>Direct Market Access</p>
+					</div>
+					<div class="flex items-center font-semibold text-info gap-4">
+						<i class="checkbox-icon icon-lg bg-primary"></i>
+						<p>No dealing Desk</p>
+					</div>
+					<div class="flex items-center font-semibold text-info gap-4">
+						<i class="checkbox-icon icon-lg bg-primary"></i>
+						<p>Very fast execution of orders</p>
+					</div>
+					<div class="flex items-center font-semibold text-info gap-4">
+						<i class="checkbox-icon icon-lg bg-primary"></i>
+						<p>Access to deep market liquidity</p>
+					</div>
+				</div>
+				<a
+					href="https://my.ilimitsinv.com/en/register"
+					target="_blank"
+					class="my-button primary rounded mx-auto min-w-72">
+					<span>Open STP Account</span>
+				</a>
+			</div>
+
+			<div class="flex flex-col reveal fade-up gap-3 text-info horizontal-padding md:narrow mb-32">
+				<h3 class="font-semibold">What is No Dealing Desk?</h3>
+				<p>
+					STP brokers are a type of NDD (No Dealing Desk) brokerage, this means they do not use a
+					dealing desk to complete transactions. Dealing desk brokers on the other hand, also known
+					as market makers, fulfill the other end of a client's transaction. This is done either by
+					finding another client to take the opposite side or by taking the trade themselves. As
+					market makers are not directly connected to the broader market, the number of clients who
+					can take the opposite side of a trade is limited. Therefore, the broker will often buy the
+					stock a client is selling, hence, making the market themselves. Regulated STP forex
+					brokers are known as A-book brokers while market makers are known as B-book brokers.
+				</p>
+			</div>
+
+			<%- include('../commonSections/newsletter-subscription') %> <%-
+			include('../commonSections/footer') %>
+		</div>
+	</body>
+
+	<script src="/js/commonUtils.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../commonSections/head') %>
+
+	<body>
+		<%- include('../commonSections/navbar') %>
+
+		<div class="max-w-screen-2xl mx-auto py-24">
+			<div class="flex flex-col text-info horizontal-padding gap-8">
+				<div class="article my-12">
+					<h6 class="font-bold text-primary mb-2">Master Trader Challenge</h6>
+					<h1 class="font-semibold text-4xl md:text-6xl">
+						<%=content.heading%>
+					</h1>
+					<div class="image-container border rounded border-line">
+						<img src="/images/promotions/master Trader_page-0003.jpg" alt="" class="size-full" />
+					</div>
+					<h3 class="font-semibold">
+						<%=content.heading%>
+					</h3>
+					<p>
+						<%=content.subheading%>
+					</p>
+					<ul>
+                        <%content.benefits.forEach((benefit) => { %>
+						<li>
+							<i class="checkbox-icon icon-md bg-primary"></i>
+							<p><%=benefit%></p>
+						</li>
+                        <%
+                        });
+                        %>
+					</ul>
+					<div class="flex flex-col py-12 md:py-20 gap-8 bg-primary/10 px-2 md:px-8 my-20">
+						<h1 class="font-semibold text-center text-xl md:text-2xl">
+							<%=content.cta%>
+						</h1>
+						<a
+							href="https://my.ilimitsinv.com/en/register"
+							target="_blank"
+							class="my-button primary rounded mx-auto w-full md:max-w-72 md:min-w-72">
+							<span><%=content.ctaLabel%></span>
+						</a>
+					</div>
+					<h3 class="font-semibold"><%=content.termCondition%></h3>
+					<ul>
+                        <%
+                        content.promotionTerms.forEach((data) => {
+                        %>
+						<li>
+							<i class="checkbox-icon icon-md bg-primary"></i>
+							<p><strong><%=data.term%></strong> <%=data.description%></p>
+						</li>
+                        <%
+                        });
+                        %>
+					</ul>
+                    <h6 class="font-semibold mt-8 text-center bg-primary/10 px-2 md:px-20 py-8"><%=content.closing%></h6>
+				</div>
+			</div>
+
+			<%- include('../commonSections/newsletter-subscription') %> <%-
+			include('../commonSections/footer') %>
+		</div>
+	</body>
+
+	<script src="/js/commonUtils.js"></script>
+</html>

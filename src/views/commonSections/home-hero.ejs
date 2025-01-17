@@ -1,0 +1,50 @@
+<section>
+	<div class="carousel-container relative w-full overflow-hidden">
+		<div id="carousel-container_images" class="carousel-container_images flex" style="width: 100%">
+			<a href="https://my.ilimitsinv.com/en/register" target="_blank" class="w-full">
+				<img src="/images/hero/banner_2.png" class="size-full" />
+			</a>
+		</div>
+		<div
+			class="flex justify-center items-center gap-2 bottom-10 absolute z-40 w-full h-fit hidden">
+			<div class="hero-image-nav-btn cursor-pointer">
+				<i class="chev-left-icon icon-2xl bg-primary"></i>
+			</div>
+			<div class="hero-image-nav-btn cursor-pointer">
+				<i class="chev-right-icon icon-2xl bg-primary"></i>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const innerContainer = document.getElementById("carousel-container_images");
+		const heroImageNavBtn = document.querySelectorAll(".hero-image-nav-btn");
+
+		let slidePercentage = 0;
+
+		function goToNextSlide() {
+			if (slidePercentage > -50) {
+				slidePercentage -= 50;
+			} else {
+				slidePercentage = 0;
+			}
+			innerContainer.style.transform = `translateX(${slidePercentage}%)`;
+		}
+
+		// let slideInterval = setInterval(goToNextSlide, 5000);
+
+		heroImageNavBtn.forEach((btn, index) => {
+			btn.addEventListener("click", () => {
+				if (index == 0 && slidePercentage < 0) {
+					slidePercentage += 50;
+				} else if (index == 1 && slidePercentage > -50) {
+					slidePercentage -= 50;
+				}
+				clearInterval(slideInterval);
+				innerContainer.style.transform = `translateX(${slidePercentage}%)`;
+				slideInterval = setInterval(goToNextSlide, 5000);
+			});
+		});
+	});
+</script>
