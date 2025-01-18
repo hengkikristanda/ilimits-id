@@ -1,3 +1,5 @@
+const { getSelectedLanguageCode } = require("../utils/commonUtils");
+
 const renderPlatform = (req, res) => {
 	const data = {
 		title: "Welcome to My Website", // Page title

@@ -30,15 +30,15 @@
 						id="language-menu"
 						class="language-menu absolute right-0 top-full transition-all duration-100 ease-in-out opacity-0 h-0 overflow-hidden rounded-lg shadow-md border border-gray-50 bg-white">
 						<div class="flex flex-col p-2 font-semibold text-gray-800">
-							<a href="?lang=en" class="icon-flag-container">
+							<a href="?lang=en" class="icon-flag-container <%=(selectedLanguage == 'EN' ? 'selected' : '')%>">
 								<div><img src="/images/flag/flag-en.png" alt="" class="size-full" /></div>
 								<h6>English</h6>
 							</a>
-							<a href="?lang=id" class="icon-flag-container">
+							<a href="?lang=id" class="icon-flag-container <%=(selectedLanguage == 'ID' ? 'selected' : '')%>">
 								<div><img src="/images/flag/flag-id.png" alt="" class="size-full" /></div>
 								<h6>Bahasa Indonesia</h6>
 							</a>
-							<a href="?lang=ms" class="icon-flag-container">
+							<a href="?lang=ms" class="icon-flag-container <%=(selectedLanguage == 'MS' ? 'selected' : '')%>">
 								<div><img src="/images/flag/flag-ms.png" alt="" class="size-full" /></div>
 								<h6>Malay</h6>
 							</a>

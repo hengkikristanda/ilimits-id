@@ -188,14 +188,10 @@ const MS = {
 		"Bagi yang mencapai keuntungan lebih dari 100% dalam 3 bulan, pemenang akan mendapatkan $10,000 sebagai Master Trader dan akan memperoleh 20% daripada keuntungan yang dihasilkan",
 };
 
-const languageCode = ["EN", "ID", "MS"];
+const { getSelectedLanguageCode } = require("../utils/commonUtils");
 
 const renderPromotionPage = (req, res) => {
 	const promotionId = req.params.promotionId || "";
-
-	let lang = req.query.lang || "EN";
-
-	if (!languageCode.includes(lang.toUpperCase())) lang = "EN";
 
 	let renderPage = "promotion/index";
 
@@ -203,8 +199,11 @@ const renderPromotionPage = (req, res) => {
 		renderPage = "promotion/" + promotionId;
 	}
 
+	const languageCode = getSelectedLanguageCode(req);
+
 	const data = {
-		content: lang.toUpperCase() == "ID" ? ID : lang.toUpperCase() == "MS" ? MS : EN,
+		content: languageCode == "ID" ? ID : languageCode == "MS" ? MS : EN,
+		selectedLanguage: languageCode,
 	};
 
 	res.render(renderPage, data); // Render the "home.ejs" template

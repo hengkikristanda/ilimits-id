@@ -1,7 +1,10 @@
+const { getSelectedLanguageCode } = require("../utils/commonUtils");
+
 const renderTrading = (req, res) => {
+
 	const data = {
 		title: "Welcome to My Website", // Page title
-		user: req.session.user || null, // Example: Check if a user is logged in
+		selectedLanguage: getSelectedLanguageCode(req),
 	};
 
 	res.render("trading/index", data); // Render the "home.ejs" template
@@ -23,6 +26,7 @@ const renderTradingAccount = (req, res) => {
 	const data = {
 		title: "Welcome to My Website", // Page title
 		user: req.session.user || null, // Example: Check if a user is logged in
+		selectedLanguage: lang.toUpperCase(),
 	};
 
 	res.render(renderPage, data); // Render the "home.ejs" template

@@ -1,7 +1,9 @@
+const { getSelectedLanguageCode } = require("../utils/commonUtils");
+
 const renderAboutUs = (req, res) => {
 	const data = {
 		title: "Welcome to My Website", // Page title
-		user: req.session.user || null, // Example: Check if a user is logged in
+		selectedLanguage: getSelectedLanguageCode(req),
 	};
 
 	res.render("aboutUs", data); // Render the "home.ejs" template
