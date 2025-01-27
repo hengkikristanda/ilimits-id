@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	})(document, window, "BrevoConversations");
 
 	window.addEventListener("scroll", reveal);
+	
 });
 
 function validateEmailInput(input) {

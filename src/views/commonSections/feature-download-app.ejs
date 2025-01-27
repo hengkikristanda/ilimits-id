@@ -1,22 +1,63 @@
-<section class="reveal fade-up">
-	<div class="borderless-card_action_container">
-		<div class="borderless-card_action w-full md:w-1/2 items-center md:items-start text-center md:text-start">
-			<h1>Download Our App</h1>
-			<h6>
+<section>
+	<div class="borderless-card_action_container relative">
+		<div
+			class="borderless-card_action w-full md:w-1/2 items-center md:items-start text-center md:text-start scroll-fade-in">
+			<h1 class="opacity-0 translate-y-10 transition-all duration-700 ease-in-out delay-300 tag">Download Our App</h1>
+			<h6 class="opacity-0 translate-y-10 transition-all duration-700 ease-in-out delay-[500ms] tag">
 				Elevate your trading with the iLimits — your gateway to the forex market anytime, anywhere.
 				Enjoy instant execution, real-time insights, and advanced tools, all secured with top-notch
 				safety features. Embrace the freedom to trade on the go. Download now and transform your
 				trading experience with iLimits, where opportunities never sleep.
 			</h6>
 			<a
-				class="btn btn-primary btn-inline"
+				class="btn btn-primary btn-inline tag opacity-0 translate-y-10 transition-all duration-700 ease-in-out delay-[700ms]"
 				href="https://download.mql5.com/cdn/web/ilimits.invest.limited/mt4/ilimitsinvest4setup.exe"
 				target="_blank">
 				<p>Download Now</p>
 			</a>
 		</div>
-		<div class="w-full md:w-1/2">
+		<div class="w-full md:w-1/2 scroll-animate relative">
+			<div
+				id="target"
+				class="size-[40rem] bg-white absolute z-10 transition-all duration-1000 ease-in-out"></div>
 			<img src="/images/phone_app.png" alt="" class="size-full" />
 		</div>
 	</div>
 </section>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		function applyScrollAnimation(className, callback) {
+			const elements = document.querySelectorAll(`.${className}`);
+
+			const observer = new IntersectionObserver(
+				(entries, observer) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							callback(entry.target);
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.5 }
+			);
+
+			elements.forEach((element) => observer.observe(element));
+		}
+
+		// Animation for #imageContent
+		applyScrollAnimation("scroll-animate", (element) => {
+			const target = element.querySelector("#target");
+			if (target) {
+				target.classList.add("scale-x-0", "translate-x-1/4");
+			}
+		});
+
+		// Animation for #textContent
+		applyScrollAnimation("scroll-fade-in", (element) => {
+			const textElements = element.querySelectorAll(".tag");
+			textElements.forEach((el) => {
+				el.classList.remove("opacity-0", "translate-y-10");
+			});
+		});
+	});
+</script>
