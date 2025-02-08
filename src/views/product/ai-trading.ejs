@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../commonSections/head') %>
+
+	<body>
+		<%- include('../commonSections/navbar') %>
+
+		<div class="max-w-screen-2xl mx-auto py-24">
+			<div class="flex flex-col text-info horizontal-padding gap-8">
+				<div class="article my-12">
+					<h6 class="font-bold text-primary mb-2">AI Driven Trading</h6>
+					<h1 class="font-bold md:text-4xl"><%=content.heading%></h1>
+					<div class="image-container border rounded border-line">
+						<a href="https://my.ilimitsinv.com/en/register" target="_blank">
+							<img
+								src="/images/products/Effortless-ai-driven-trading.jpeg"
+								alt=""
+								class="size-full" />
+						</a>
+					</div>
+					<h3 class="font-semibold"><%=content.heading%></h3>
+					<p><%=content.subheading%></p>
+
+					<div class="w-full max-w-[70rem] mx-auto mt-12">
+						<img
+							src="/images/products/why-it-has-to-be-our-ai.jpeg"
+							alt=""
+							class="size-full object-cover" />
+					</div>
+
+					<div class="w-full max-w-[70rem] mx-auto mt-12">
+						<img src="/images/products/how-it-works.jpeg" alt="" class="size-full object-cover" />
+					</div>
+
+                    <div class="flex flex-col items-center gap-20 mt-12 relative">
+                        <h1 class="font-semibold text-primary">Testimonials</h1>
+                        <div class="flex flex-col md:flex-row justify-center gap-20">
+                            <div
+                                class="bg-gray-100 size-[20rem] p-12 flex flex-col text-center text-info gap-4 shadow relative flex justify-center items-center">
+                                <h6 class="italic">
+                                    "iLimits Invest has transformed my trading experience. The AI's performance is
+                                    impressive, and I've seen consistent profits without the stress."
+                                </h6>
+                                <p><span class="font-semibold">Alex P., </span> - Satisfied Client</p>
+                                <i class="double-quotes icon-6xl bg-primary/30 absolute top-0 left-5"></i>
+                            </div>
+                            <div
+                                class="bg-gray-100 size-[20rem] p-12 flex flex-col text-center text-info gap-4 shadow relative flex justify-center items-center">
+                                <h6 class="italic">
+                                    "The automated AI integration is seamless. I appreciate the transparency and the steady returns on my investments."
+                                </h6>
+                                <p><span class="font-semibold">Maria L., </span> - Happy Investor</p>
+                                <i class="double-quotes icon-6xl bg-primary/30 absolute top-0 left-5"></i>
+                            </div>
+                        </div>
+                        <h1 class="hidden xl:flex text-[10rem] absolute bottom-20 size-full text-primary/10 font-semibold -z-10">Testimonials</h1>
+                    </div>
+
+					<div class="flex flex-col md:flex-row justify-between mt-32">
+						<div class="md:w-1/2 relative flex flex-col py-20 pl-20">
+							<h1 class="font-bold">Frequently Asked Questions</h1>
+							<h1
+								class="text-[5rem] lg:text-[10rem] font-semibold text-primary/15 bottom-0 xl:bottom-10 left-0 absolute size-full">
+								FAQS
+							</h1>
+						</div>
+						<div class="md:w-1/2 flex flex-col min-h-[30rem]">
+							<% content.faq.forEach((qa) => { %>
+							<button class="accordion"><%=qa.q%></button>
+							<div class="panel">
+								<p><%=qa.a%></p>
+							</div>
+							<% }); %>
+						</div>
+					</div>
+
+					<div class="flex flex-col py-12 md:py-20 gap-8 bg-primary/10 px-2 md:px-8 my-20">
+						<h1 class="font-semibold text-center text-xl md:text-2xl"><%=content.cta%></h1>
+						<a
+							href="https://my.ilimitsinv.com/en/register"
+							target="_blank"
+							class="my-button primary rounded mx-auto w-full md:max-w-72 md:min-w-72">
+							<span><%=content.ctaLabel%></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<%- include('../commonSections/newsletter-subscription') %> <%-
+			include('../commonSections/footer') %>
+		</div>
+	</body>
+
+	<script src="/js/commonUtils.js"></script>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
+	</script>
+</html>

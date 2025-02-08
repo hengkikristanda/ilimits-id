@@ -1,0 +1,94 @@
+<div class="flex items-center gap-20 pl-20 relative overflow-hidden scroll-animate">
+	<div class="tag transition-all duration-500 ease-in-out bg-white h-72 w-4"></div>
+	<div class="tag transition-all duration-500 ease-in-out bg-white h-72 w-4"></div>
+	<div class="tag transition-all duration-500 ease-in-out bg-white h-72 w-12"></div>
+	<div class="tag transition-all duration-500 ease-in-out bg-white h-72 w-16"></div>
+	<div class="size-96 absolute -z-10 left-10">
+		<img
+			src="/images/achievement-business-goal-success-concept 1.webp"
+			alt=""
+			class="size-full object-cover" />
+	</div>
+</div>
+<div class="trapezoid"></div>
+<div class="container">
+	<div class="sentence" id="sentence"></div>
+</div>
+<style>
+	.trapezoid {
+		width: 200px;
+		height: 0;
+		border-bottom: 100px solid red; /* Background color */
+		border-left: 100px solid green;
+		border-right: 100px solid blue;
+		margin: 50px auto;
+	}
+	.container {
+		overflow: hidden;
+		height: 50px; /* Adjust based on your font size */
+	}
+
+	.sentence {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.word {
+		opacity: 0;
+		display: inline-block;
+		transform: translateY(20px);
+		transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+		margin-right: 5px; /* Space between words */
+	}
+</style>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		function applyScrollAnimation(className, callback) {
+			const elements = document.querySelectorAll(`.${className}`);
+
+			const observer = new IntersectionObserver(
+				(entries, observer) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							callback(entry.target);
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.5 }
+			);
+
+			elements.forEach((element) => observer.observe(element));
+		}
+
+		// Animation for #imageContent
+		applyScrollAnimation("scroll-animate", (element) => {
+			const textElements = element.querySelectorAll(".tag");
+			textElements.forEach((el) => {
+				el.classList.add("scale-x-0", "translate-x-1/2");
+			});
+		});
+
+		const sentence = "This is a sliding up animation effect.";
+		const sentenceContainer = document.getElementById("sentence");
+		const startButton = document.getElementById("startButton");
+
+		applyScrollAnimation("container", (sentenceContainer) => {
+			const words = sentence.split(" ");
+			sentenceContainer.innerHTML = ""; // Clear previous words
+
+			words.forEach((word, index) => {
+				const span = document.createElement("span");
+				span.className = "word";
+				span.textContent = word;
+				sentenceContainer.appendChild(span);
+
+				// Delay the animation for each word
+				setTimeout(() => {
+					span.style.opacity = 1;
+					span.style.transform = "translateY(0)";
+				}, index * 200); // Adjust the timing as needed
+			});
+		});
+	});
+</script>

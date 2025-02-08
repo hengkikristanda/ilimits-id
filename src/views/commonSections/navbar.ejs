@@ -16,6 +16,16 @@
 						<a class="text-link" href="/platform">Platform</a>
 					</li>
 					<li>
+						<div class="flex flex-col relative has-menu">
+							<a class="text-link" href="#">Products</a>
+							<ul class="sub-menu">
+								<li class="group hover:bg-secondary py-2 px-4"><a class="group-hover:text-white" href="/products/ai-trading">AI Trading</a></li>
+								<li class="group hover:bg-secondary py-2 px-4"><a class="group-hover:text-white" href="/products/copy-trade">iLimits Copy Trade</a></li>
+								<li class="group hover:bg-secondary py-2 px-4"><a class="group-hover:text-white" href="/products/hedge">Hedge Trading</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
 						<a class="text-link" href="/about-us">About</a>
 					</li>
 				</ul>
@@ -27,15 +37,21 @@
 						id="language-menu"
 						class="language-menu absolute right-0 top-full transition-all duration-100 ease-in-out opacity-0 h-0 overflow-hidden rounded-lg shadow-md border border-gray-50 bg-white">
 						<div class="flex flex-col p-2 font-semibold text-gray-800">
-							<a href="?lang=en" class="icon-flag-container <%=(selectedLanguage == 'EN' ? 'selected' : '')%>">
+							<a
+								href="?lang=en"
+								class="icon-flag-container <%=(selectedLanguage == 'EN' ? 'selected' : '')%>">
 								<div><img src="/images/flag/flag-en.png" alt="" class="size-full" /></div>
 								<h6>English</h6>
 							</a>
-							<a href="?lang=id" class="icon-flag-container <%=(selectedLanguage == 'ID' ? 'selected' : '')%>">
+							<a
+								href="?lang=id"
+								class="icon-flag-container <%=(selectedLanguage == 'ID' ? 'selected' : '')%>">
 								<div><img src="/images/flag/flag-id.png" alt="" class="size-full" /></div>
 								<h6>Bahasa Indonesia</h6>
 							</a>
-							<a href="?lang=ms" class="icon-flag-container <%=(selectedLanguage == 'MS' ? 'selected' : '')%>">
+							<a
+								href="?lang=ms"
+								class="icon-flag-container <%=(selectedLanguage == 'MS' ? 'selected' : '')%>">
 								<div><img src="/images/flag/flag-ms.png" alt="" class="size-full" /></div>
 								<h6>Malay</h6>
 							</a>
@@ -50,6 +66,7 @@
 		</div>
 	</div>
 </nav>
+
 
 <nav class="navbar-mobile">
 	<div class="mx-auto flex justify-between items-center">
@@ -111,6 +128,7 @@
 		<a class="selected" href="/"><span>Home</span></a>
 		<a href="/promotion/master-trader-challenge"><span>Promotion</span></a>
 		<a href="/platform"><span>Platform</span></a>
+		<a href="/products"><span>Products</span></a>
 		<a href="/about-us"><span>About</span></a>
 	</div>
 </div>
@@ -168,6 +186,7 @@
 	});
 
 	let lastWidth = window.innerWidth;
+
 
 	window.addEventListener("resize", () => {
 		const currentWidth = window.innerWidth;

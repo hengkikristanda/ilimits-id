@@ -148,7 +148,7 @@ a {
 	}
 
 	.navbar {
-		@apply bg-white border-b border-line rounded-md py-4 fixed z-40 top-0 w-full max-w-screen-2xl shadow-sm horizontal-padding hidden lg:block;
+		@apply bg-white border-b border-line rounded-md h-fit min-h-24 py-4 fixed z-40 top-0 w-full max-w-screen-2xl shadow-sm horizontal-padding hidden lg:block;
 	}
 	ul.navbar-menu {
 		@apply flex gap-8;
@@ -553,4 +553,74 @@ a {
 
 #carousel-container_images {
 	transition: transform 0.2s ease-in-out;
+}
+
+.navbar-dropmenu-container {
+	position: fixed;
+	background-color: var(--info_darker);
+	width: 100%;
+	max-width: 1536px;
+	height: 10rem;
+	z-index: 20;
+	top: -10rem;
+	transition: top 0.1s ease-in-out;
+}
+
+.navbar-dropmenu-container.expand {
+	top: 6rem;
+}
+
+.accordion {
+	font-weight: 600;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 1rem;
+	transition: 0.4s;
+}
+
+.accordion:after {
+	content: "\002B";
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.accordion.active:after {
+	content: "\2212";
+}
+
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.sub-menu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	background-color: white;
+	border: 1px solid #f3f4f6;
+	border-radius: 0.25rem;
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	top: 2.5rem;
+	width: 18rem;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s;
+}
+
+.has-menu:hover > .sub-menu {
+	max-height: 10rem;
+	opacity: 1;
+	visibility: visible;
 }

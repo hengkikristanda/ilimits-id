@@ -1,0 +1,75 @@
+<div class="carousel-container mb-32">
+	<div class="carousel" id="carousel">
+		<a href="/products/ai-trading"><img src="/images/hero/ai-trading.png" /></a>
+        <a href="/products/copy-trade"><img src="/images/hero/copy-trade.png" /></a>
+        <a href="/products/hedge"><img src="/images/hero/hedge-trading.png" /></a>
+	</div>
+	<button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+	<button class="carousel-btn next" onclick="nextSlide()">❯</button>
+	<div class="carousel-indicators" id="indicators"></div>
+</div>
+
+<script>
+	const carousel = document.getElementById("carousel");
+	const indicatorsContainer = document.getElementById("indicators");
+	let currentIndex = 0;
+	const slides = document.querySelectorAll(".carousel img");
+	const totalSlides = slides.length;
+	let slideInterval;
+
+	function updateCarousel() {
+		const slideWidth = slides[0].clientWidth;
+		carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+		updateIndicators();
+	}
+
+	function prevSlide() {
+		currentIndex = currentIndex === 0 ? totalSlides - 1 : currentIndex - 1;
+		resetAutoSlide();
+		updateCarousel();
+	}
+
+	function nextSlide() {
+		currentIndex = currentIndex === totalSlides - 1 ? 0 : currentIndex + 1;
+		resetAutoSlide();
+		updateCarousel();
+	}
+
+	function updateIndicators() {
+		document.querySelectorAll(".dot").forEach((dot, idx) => {
+			dot.classList.toggle("active", idx === currentIndex);
+		});
+	}
+
+	function goToSlide(index) {
+		currentIndex = index;
+		resetAutoSlide();
+		updateCarousel();
+	}
+
+	function startAutoSlide() {
+		slideInterval = setInterval(() => {
+			nextSlide();
+		}, 5000);
+	}
+
+	function resetAutoSlide() {
+		clearInterval(slideInterval);
+		startAutoSlide();
+	}
+
+	// Create indicators dynamically
+	for (let i = 0; i < totalSlides; i++) {
+		const dot = document.createElement("div");
+		dot.classList.add("dot");
+		if (i === 0) dot.classList.add("active");
+		dot.addEventListener("click", () => goToSlide(i));
+		indicatorsContainer.appendChild(dot);
+	}
+
+	// Handle window resize to update carousel width
+	window.addEventListener("resize", updateCarousel);
+
+	// Start auto-slide on page load
+	startAutoSlide();
+</script>

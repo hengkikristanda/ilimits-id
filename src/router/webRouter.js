@@ -12,6 +12,7 @@ const aboutUsController = require("../controllers/aboutUsController");
 const promotionController = require("../controllers/promotionController");
 const platformController = require("../controllers/platformController");
 const tradingController = require("../controllers/tradingController");
+const productController = require("../controllers/productController");
 
 const newsletterSubscriptionController = require("../controllers/newsletterSubscriptionController");
 
@@ -25,6 +26,10 @@ router.get("/trading", tradingController.renderTrading);
 router.get("/trading/:accountType", tradingController.renderTradingAccount);
 
 router.get("/platform", platformController.renderPlatform);
+
+router.get("/products/ai-trading", productController.renderAiTrading);
+router.get("/products/copy-trade", productController.renderCopyTrade);
+router.get("/products/hedge", productController.renderHedge);
 
 router.get("/about-us", aboutUsController.renderAboutUs);
 
